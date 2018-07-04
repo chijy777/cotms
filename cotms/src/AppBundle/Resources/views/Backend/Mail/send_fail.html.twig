@@ -1,0 +1,19 @@
+{% extends '@App/Backend/base.html.twig' %}
+
+{% block body %}
+    <div class="main_box new_order">
+        <h2><span></span>{{ result }}</h2>
+        <h2><span></span>
+            SendCloud API调用返回结果：{{ apiReturn }}
+        </h2>
+        <h2><span></span>
+            <a href="http://www.sendcloud.net/doc/email_v2/" class="red" target="_blank">
+                点击跳转到  SendCloud API页面查询错误代码！
+            </a>
+        </h2>
+
+        <div class="cont_box">
+            <img class="img" src="{{ asset('WebAsset/') }}images/send_fail.png"/>
+        </div>
+    </div>
+{% endblock %}

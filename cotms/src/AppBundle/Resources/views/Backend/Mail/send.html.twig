@@ -1,0 +1,51 @@
+{% extends '@App/Backend/base.html.twig' %}
+
+{% block body %}
+<div class="main_box new_order">
+    <h2><span></span>发邮件</h2>
+
+    <div class="cont_box">
+        {#<div class="search_formbox clearfix"></div>#}
+        <form method="post" action="{{ path('backend_mail_sendCommit') }}">
+            <ul class="addpro_box">
+                <li>
+                    <label>收件人：</label>
+                    <textarea class="textarea" name="receivers" placeholder="" rows="8" ></textarea>
+                    {#<input type="text" name="receiver" value="">#}
+                </li>
+                <li>
+                    <label>主题：</label>
+                    <textarea class="textarea" name="subject" placeholder="" rows="2" ></textarea>
+                </li>
+
+                {#<li>#}
+                    {#<label>正文：</label>#}
+                    {#<textarea class="textarea" name="mailbody" placeholder="" rows="20" ></textarea>#}
+                {#</li>#}
+                <li><label>正文：</label></li>
+                <li>
+                    <script id="mailbodyContainer" name="mailbody" type="text/plain" style="width:1000px; height:400px;">
+                    </script>
+                </li>
+            </ul>
+
+            <div class="probtn_box clearfix">
+                <input type="submit" value="提  交" class="btn blue_btn"/>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
+
+
+{% block js %}
+    <script type="text/javascript" src="{{ asset('WebAsset/lib/UEditor/ueditor.config.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('WebAsset/lib/UEditor/ueditor.all.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('WebAsset/lib/UEditor/lang/zh-cn/zh-cn.js') }}"></script>
+
+    <!-- 富文本编辑器 -->
+    <script type="text/javascript">
+        var mailbody = UE.getEditor('mailbodyContainer');
+    </script>
+{% endblock %}
+

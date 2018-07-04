@@ -56,9 +56,7 @@
             <p>加载中，请稍后</p>
         </div>
 
-        {#{% include '@AppWeb/Backend/Common/entry.html.twig' %}#}
-
-        <iframe src="" name="cont_box" frameborder="0" width="100%" height="100%" seamless>
+        <iframe src="{{ path('backend_mail_send') }}" name="cont_box" frameborder="0" width="100%" height="100%" seamless>
         </iframe>
     </div>
 {% endblock %}
@@ -75,6 +73,8 @@
             setTimeout(function(){$("iframe[name='cont_box']").css("opacity","1");},500);
         });
 
+
+
         $(function(){
             $(".loading").hide();
             setTimeout(function(){$("iframe[name='cont_box']").css("opacity","1");},500);
@@ -90,5 +90,4 @@
 {% block js %}
 {% endblock %}
 <!--自定义JS结束-->
-
 </html>
