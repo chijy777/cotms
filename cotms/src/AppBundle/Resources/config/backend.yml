@@ -1,0 +1,10 @@
+#首页.
+backend_index:
+    path:     /
+    defaults: { _controller: AppBundle:Backend\Index:index }
+
+#邮件管理.
+backend_mail:
+    prefix:   /mail
+    resource: "@AppBundle/Resources/config/Backend/mail.yml"
+

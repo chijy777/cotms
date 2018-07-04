@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="renderer" content="webkit">
+	<title>
+        {% block title %}COT{% endblock %}
+	</title>
+
+    {% block stylesheets %}
+		<link type="text/css" rel="stylesheet" href="{{ asset('WebAsset/') }}css/style.css">
+        <link type="text/css" rel="stylesheet" href="{{ asset('WebAsset/fontsawesome/') }}css/font-awesome.css">
+		{#<link type="text/css" rel="stylesheet" href="{{ asset('WebAsset/AssetLib/Uploadify/uploadify.css') }}">#}
+    {% endblock %}
+
+    {% block css %}
+    {% endblock %}
+</head>
+
+<body>
+{% block body %}
+{% endblock %}
+</body>
+
+{% block javascript %}
+    <script type="text/javascript" src="{{ asset('WebAsset/js/jquery-1.11.1.min.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('WebAsset/js/tipSuppliers.js') }}"></script>
+    {#<script type="text/javascript" src="{{ asset('WebAsset/js/ahn.js') }}"></script>#}
+    {#<script src="{{ asset('WebAsset/WebBundle/Backend/js/other.js') }}"></script>#}
+{% endblock %}
+
+{% block js %}
+{% endblock %}
+</body>
+</html>

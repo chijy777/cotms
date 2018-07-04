@@ -1,0 +1,4 @@
+#发送邮件
+backend_mail_send:
+    path:     /
+    defaults: { _controller: AppBundle:Backend\Mail:index}

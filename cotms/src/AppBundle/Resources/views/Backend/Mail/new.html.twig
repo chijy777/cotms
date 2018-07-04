@@ -1,0 +1,98 @@
+{% extends '@AppWeb/Backend/base.html.twig' %}
+
+{% block body %}
+<div class="main_box">
+    <h2><span></span>添加品牌</h2>
+
+    <div class="cont_box">
+        <div class="search_formbox clearfix">
+            <a href="{{ path('backend_brand_index') }}" class="btn blue_btn"><span>返回品牌列表</span></a>
+        </div>
+    </div>
+
+    <div class="cont_box">
+        {{ form_start(form, {'method': 'post', 'action': path('backend_brand_new') }) }}
+        <ul class="addpro_box">
+            <li>
+                <label>品牌名称：</label>
+                {{ form_widget(form.bname) }}
+            </li>
+            <li>
+                <label>选择厂家：</label>
+                {{ form_widget(form.factoryId) }}
+            </li>
+            <li>
+                <label>排序号：</label>
+                {{ form_widget(form.sort, {"attr":{'placeholder':'默认100，值越小优先级越高' }}) }}
+            </li>
+            <li>
+                <label>品牌描述：</label>
+                {{ form_widget(form.bdesc, {"attr":{'type':'area', 'class':'tarea', 'rows':'8', 'placeholder':'填写品牌描述' }}) }}
+            </li>
+            <li>
+                <label>备注：</label>
+                {{ form_widget(form.comment, {"attr":{'type':'area', 'class':'tarea', 'rows':'6', 'placeholder':'填写备注' }}) }}
+            </li>
+            <li>
+                <div lab="uploadFile">
+                    <label class="form-label">品牌图片：</label>
+                    <span class="orange">格式(*.jpg,*.png)，大小(每张最大2M)，数量(最多1张)</span>
+                    <div class="formControls col-10">
+                        <input id="brandImg" type="file" multiple="true" class='btn btn_info'>
+                        <div id="uploadList">
+                            <ul class="yt-img">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+        <div class="probtn_box clearfix">
+            <input type="submit" value="提  交" class="btn blue_btn"/>
+        </div>
+        {{ form_end(form) }}
+    </div>
+</div>
+{% endblock %}
+
+
+{% block js %}
+<!-- 图片上传. -->
+    <script type="text/javascript" src="{{ asset('WebAsset/AssetLib/Uploadify/jquery.uploadify.min.js') }}"></script>
+
+    <script type="text/javascript">
+        $(function() {
+            $('#brandImg').uploadify({
+                'formData'      : {'path' : './uploads'},
+                'fileTypeDesc'  : '上传文件',    //上传描述
+                'fileTypeExts'  : '*.jpg;*.png',
+                'swf'           : '{{ asset('WebAsset/AssetLib/Uploadify/uploadify.swf') }}',
+                'uploader'      : '{{ path('base_brandImgUpload') }}',
+                'buttonText'    : '选择图片',
+                'fileSizeLimit' : '2000KB',
+                'uploadLimit'   : 3,    //上传文件数
+                'width'         : 65,
+                'height'        : 25,
+                'successTimeout': 10,   //等待服务器响应时间
+                'removeTimeout' : 0.2,  //成功显示时间
+                'onUploadSuccess' : function(file, data, response) {
+                    data = $.parseJSON(data);
+                    var imageUrl = data.url;
+                    var li =
+                        "<li path='" +data.path+ "' url='" +data.url+ "' id='up-pic'>" +
+                        "<img src='" +imageUrl+ "'style='width:320px;height:200px;border:1px solid #c0c0c0'/>" +
+                        "<input type='hidden' name='logo' value='" +data.path+ "'/>" +
+                        "<a href='javascript:;' class='pic_del btn btn_info'><span>删除图片</span></a></li>";
+                    $("#uploadList ul").prepend(li);
+                }
+            });
+
+            <!-- 删除图片. -->
+            $('.pic_del').click(function() {
+                $(this).parent('li').remove();
+            });
+        });
+    </script>
+{% endblock %}
+

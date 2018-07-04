@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="renderer" content="webkit">
+	<title>
+		{% block title %}COT{% endblock %}
+	</title>
+
+    <!--公共CSS-->
+	{% block stylesheets %}
+        <link type="text/css" rel="stylesheet" href="{{ asset('WebAsset/fontsawesome/') }}css/font-awesome.css">
+        <link type="text/css" rel="stylesheet" href="{{ asset('WebAsset/') }}css/style.css">
+	{% endblock %}
+
+    <!--自定义CSS-->
+	{% block css %}
+	{% endblock %}
+</head>
+
+<body>
+{% block bodyTop %}
+    <div class="header">
+        <div class="logo">
+            <a href="{{ path('backend_index') }}">
+                <img src="{{ asset('WebAsset/images/logo.png') }}"/>
+            </a>
+        </div>
+
+        {% include '@App/Backend/Common/topNav.html.twig' %}
+
+        <ul class="login_msg">
+            {% if app.user is defined and app.user is not empty %}
+                <li style="font-weight:600;">
+                    您好，{{ app.user.nickname }}
+                </li>
+            {% endif %}
+        </ul>
+    </div>
+
+    {% include '@App/Backend/Common/leftMenu.html.twig' %}
+{% endblock %}
+
+{% block body %}
+    <div class="main_right">
+        <div class="loading">
+            <div class="spinner">
+                <div class="rect1"></div>
+                <div class="rect2"></div>
+                <div class="rect3"></div>
+                <div class="rect4"></div>
+                <div class="rect5"></div>
+            </div>
+            <p>加载中，请稍后</p>
+        </div>
+
+        {#{% include '@AppWeb/Backend/Common/entry.html.twig' %}#}
+
+        <iframe src="" name="cont_box" frameborder="0" width="100%" height="100%" seamless>
+        </iframe>
+    </div>
+{% endblock %}
+</body>
+
+<!--公共JS开始-->
+{% block javascript %}
+    <script type="text/javascript" src="{{ asset('WebAsset/js/jquery-1.11.1.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('WebAsset/js/tipSuppliers.js') }}"></script>
+
+    <script>
+        $("iframe[name='cont_box']").on("load",function(){
+            $(".loading").hide();
+            setTimeout(function(){$("iframe[name='cont_box']").css("opacity","1");},500);
+        });
+
+        $(function(){
+            $(".loading").hide();
+            setTimeout(function(){$("iframe[name='cont_box']").css("opacity","1");},500);
+            $(".nav li:first").trigger("click");
+        });
+
+        jQuery("body").jrdek({Mtop:".header",Mleft:".main_left",Mright:".main_right",foldCell:".main_left h2"});
+    </script>
+{% endblock %}
+<!--公共JS结束-->
+
+<!--自定义JS开始-->
+{% block js %}
+{% endblock %}
+<!--自定义JS结束-->
+
+</html>
