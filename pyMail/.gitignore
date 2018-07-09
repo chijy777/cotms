@@ -1,0 +1,20 @@
+# Python:
+*.py[cod]
+*.so
+*.egg
+*.egg-info
+dist
+build
+target
+.classpath
+.project
+#.settings
+*.iml
+
+.idea
+.idea/workspace.xml
+
+*.log
+
+_bak
+*.zip
