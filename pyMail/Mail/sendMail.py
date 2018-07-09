@@ -1,20 +1,50 @@
 #!/usr/bin/python
 #coding:utf-8
-import requests, json
+import json
 import pymysql
-import settings
+import requests
+from Mail import settings
 
 
 class SendMail(object):
     def __init__(self):
         self.mysqlDB = None
         self.mysqlCursor = None
-        self.connect_mysql()  #连接DB
 
         self.contentId = None
         self.subject = None
         self.body = None
         self.mailList = []
+
+        # 连接DB
+        self.connect_mysql()
+
+
+    def send_mail(self):
+        """
+        发送邮件.
+        """
+        # 取邮件内容
+        self.mysql_query_mail_content()
+
+        # 取邮箱清单.
+        self.mysql_query_waited_mail_list()
+
+        # 测试号.
+        # self.mailList = ["1178937142@qq.com"]
+        # self.mailList = [
+        #     '2585747805@qq.com',
+        #     '2317758329@qq.com',
+        #     'jayeer@citiz.net',
+        #     '17156309@qq.com',
+        #     '1981211830@qq.com',
+        #     '17156311@qq.com'
+        # ]
+
+        # 启动邮件发送，逐条发送.
+        for mail in self.mailList:
+            print(mail)
+            # self.send_one(mail, self.subject, self.body)
 
 
     def connect_mysql(self):
@@ -30,28 +60,7 @@ class SendMail(object):
         )
         self.mysqlCursor = self.mysqlDB.cursor()
 
-
-    def send_mail(self):
-        """
-        发送邮件.
-        """
-        self.mysql_query_mail_content()
-        self.mysql_query_waited_mail_list()
-
-        # self.mailList = ["1178937142@qq.com"]
-        # self.mailList = [
-        #     '2585747805@qq.com',
-        #     '2317758329@qq.com',
-        #     'jayeer@citiz.net',
-        #     '17156309@qq.com',
-        #     '1981211830@qq.com',
-        #     '17156311@qq.com'
-        # ]
-        for mail in self.mailList:
-            print(mail)
-            # self.send_one(mail, self.subject, self.body)
-
-
+    
     def mysql_query_mail_content(self):
         """
         DB.取邮件内容.
@@ -89,16 +98,17 @@ class SendMail(object):
         #成功
         if(json_result['result'] == True):
             sql = "UPDATE cot_mail_send SET sender_name = '%s', sender_mail = '%s', send_result='%s', " \
-                  "send_time=UNIX_TIMESTAMP(now()), state=1 " \
+                  "send_time=UNIX_TIMESTAMP(now()), state=1, update_time=UNIX_TIMESTAMP(now())" \
                   "WHERE mail_id='%s' AND content_id=%d" %(
-                        settings.SEND_CLOUD_FROM_NAME, settings.SEND_CLOUD_FROM, result_txt, to_mail, self.contentId
+                      settings.SEND_CLOUD_FROM_NAME, settings.SEND_CLOUD_FROM, result_txt, to_mail, self.contentId
                     )
         else:
             sql = "UPDATE cot_mail_send SET sender_name = '%s', sender_mail = '%s', send_result='%s', " \
                   "send_time=UNIX_TIMESTAMP(now()), state=-1 " \
                   "WHERE mail_id='%s' AND content_id=%d" % (
-                        settings.SEND_CLOUD_FROM_NAME, settings.SEND_CLOUD_FROM, result_txt, to_mail, self.contentId
+                      settings.SEND_CLOUD_FROM_NAME, settings.SEND_CLOUD_FROM, result_txt, to_mail, self.contentId
                     )
+        # print(sql)
         try:
             self.mysqlCursor.execute(sql)
             self.mysqlDB.commit()

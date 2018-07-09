@@ -1,7 +1,7 @@
 #!/usr/bin/python
 #coding:utf-8
-import requests, json
-import settings
+import requests
+from Mail import settings
 
 subject = """
 COT 邮件订阅申请确认 COT mail subscription application confirmation  (请勿回复本邮件) 
