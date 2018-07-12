@@ -4,7 +4,7 @@ import datetime,time
 from lxml import etree
 from PIL import Image
 from selenium import webdriver
-from testSub.ruokuai import RClient
+from TestSub.ruokuai import RClient
 
 
 class SubTest(object):

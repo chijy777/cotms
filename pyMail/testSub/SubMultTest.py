@@ -2,7 +2,7 @@
 #coding:utf-8
 import threading
 import time
-from testSub.SubTest import SubTest
+from TestSub.SubTest import SubTest
 
 
 proclist=[]
