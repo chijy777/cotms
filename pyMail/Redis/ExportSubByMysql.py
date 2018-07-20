@@ -4,7 +4,7 @@ import pymysql
 import redis
 
 
-class ExportFromMysql(object):
+class ExportSubByMysql(object):
     def __init__(self):
         self.mysqlDB = None
         self.mysqlCursor = None
@@ -66,6 +66,6 @@ class ExportFromMysql(object):
             print(self.subList)
 
 if __name__ == '__main__':
-    export = ExportFromMysql()
+    export = ExportSubByMysql()
     export.process()
 

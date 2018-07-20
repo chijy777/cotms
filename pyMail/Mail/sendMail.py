@@ -3,7 +3,7 @@
 import json
 import pymysql
 import requests
-from Mail import settings
+from pyMail.Mail import settings
 
 
 class SendMail(object):
@@ -30,7 +30,7 @@ class SendMail(object):
         # 取邮箱清单.
         self.mysql_query_waited_mail_list()
 
-        # 测试号.
+        # 测试号-测试.
         # self.mailList = ["1178937142@qq.com"]
         # self.mailList = [
         #     '2585747805@qq.com',
@@ -44,8 +44,7 @@ class SendMail(object):
         # 启动邮件发送，逐条发送.
         for mail in self.mailList:
             print(mail)
-            # self.send_one(mail, self.subject, self.body)
-
+            self.send_one(mail, self.subject, self.body)
 
     def connect_mysql(self):
         """
