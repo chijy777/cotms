@@ -32,6 +32,7 @@ class SendMail(object):
 
         # 测试号-测试.
         # self.mailList = ["1178937142@qq.com"]
+        # self.mailList = ["2585747805@qq.com"]
         # self.mailList = [
         #     '2585747805@qq.com',
         #     '2317758329@qq.com',
@@ -72,7 +73,7 @@ class SendMail(object):
             self.contentId = row[0]
             self.subject = row[1]
             self.body = row[2]
-            print('%s | %s' %(self.subject, self.body))
+        print('%s | %s' %(self.subject, self.body))
 
     def mysql_query_waited_mail_list(self):
         """
