@@ -13,8 +13,6 @@ class NotifyHandler(tornado.web.RequestHandler):
         print("user============>", uname)
         pwd = self.get_argument('password')
         print("pwd============>", pwd)
-        # data = self.get_argument('username','password')
-        # print("data============>", data)
         respon = {'issuccess': uname}
         respon_json = tornado.escape.json_encode(respon)
         self.write(respon_json)

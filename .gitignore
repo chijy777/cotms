@@ -13,8 +13,6 @@ target
 
 .idea
 .idea/workspace.xml
-
 *.log
-
 _bak
 *.zip
