@@ -29,9 +29,13 @@ class NotifyHandler(tornado.web.RequestHandler):
             logger.info("'{}'============>'{}{}'".format( k, type(v), v))
 
         respon = {
-            'result' :  'ok',
-            'message' :  '接收成功.',
+            'Action' :  'AuthConfirm',
+            "Error": 0,
+            "Desc": "SUCCESS",
+            "Result": 'true',
+
         }
+
         respon_json = tornado.escape.json_encode(respon)
         self.write(respon_json)
 
