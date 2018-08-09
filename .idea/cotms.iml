@@ -9,6 +9,7 @@
     <option name="TEMPLATE_FOLDERS">
       <list>
         <option value="$MODULE_DIR$/cotms/vendor/symfony/symfony/src/Symfony/Bridge/Twig/Tests/Extension/Fixtures/templates" />
+        <option value="$MODULE_DIR$" />
       </list>
     </option>
   </component>

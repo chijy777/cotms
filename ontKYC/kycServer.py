@@ -17,20 +17,26 @@ class IndexHandler(tornado.web.RequestHandler):
 
 
 class NotifyHandler(tornado.web.RequestHandler):
+    """证书信息."""
     def post(self):
         print("ip============>", self.request.remote_ip)
-        uname = self.get_argument('username')
-        print("user============>", uname)
-        pwd = self.get_argument('password')
-        print("pwd============>", pwd)
-        respon = {'return': uname}
+        print("arguments============>", self.request.arguments)
+        print("body_arguments============>", self.request.body_arguments)
+
+        print("============>", type(self.request.body_arguments))
+        for k, v in self.request.body_arguments.items():
+            print("%s============>"%(k), type(v), v)
+
+        respon = {'result': 'ok'}
         respon_json = tornado.escape.json_encode(respon)
         self.write(respon_json)
+
 
 application = tornado.web.Application([
     (r"/ontkyc", IndexHandler),
     (r"/ontkyc/notify", NotifyHandler),
 ])
+
 
 if __name__ == "__main__":
     tornado.options.parse_command_line()
