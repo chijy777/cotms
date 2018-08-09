@@ -1,3 +1,5 @@
+import json
+import logging
 import tornado
 import tornado.web
 import tornado.httpserver
@@ -7,8 +9,9 @@ from tornado.options import define, options
 from tornado.httpserver import HTTPServer
 
 
-define("port", default=8801, help="run on the default port", type=int)
+logger = logging.getLogger("ontkyc")
 
+define("port", default=8801, help="run on the default port", type=int)
 
 class IndexHandler(tornado.web.RequestHandler):
     """Use to test."""
@@ -19,15 +22,16 @@ class IndexHandler(tornado.web.RequestHandler):
 class NotifyHandler(tornado.web.RequestHandler):
     """证书信息."""
     def post(self):
-        print("ip============>", self.request.remote_ip)
-        print("arguments============>", self.request.arguments)
-        print("body_arguments============>", self.request.body_arguments)
-
-        print("============>", type(self.request.body_arguments))
+        logger.info("ip======================>'{}'".format( self.request.remote_ip))
+        logger.info("arguments=========>'{}'".format(self.request.arguments))
+        # logger.info("body_arguments============>'{}{}'".format(type(self.request.body_arguments), self.request.body_arguments))
         for k, v in self.request.body_arguments.items():
-            print("%s============>"%(k), type(v), v)
+            logger.info("'{}'============>'{}{}'".format( k, type(v), v))
 
-        respon = {'result': 'ok'}
+        respon = {
+            'result' :  'ok',
+            'message' :  '接收成功.',
+        }
         respon_json = tornado.escape.json_encode(respon)
         self.write(respon_json)
 
