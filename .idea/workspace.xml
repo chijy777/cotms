@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8684569d-ae8e-4c4b-870e-072e9b050f92" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/cotms.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/cotms.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ontKYC/kycServer.py" beforeDir="false" afterPath="$PROJECT_DIR$/ontKYC/kycServer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ontKYC/kycCliTest2.py" beforeDir="false" afterPath="$PROJECT_DIR$/ontKYC/kycCliTest2.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,7 +24,7 @@
     <SUITE FILE_PATH="coverage/cotms$Unittests_in_test1_server_py.coverage" NAME="Unittests in test1_server.py Coverage Results" MODIFIED="1533703459109" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ontKYC" />
     <SUITE FILE_PATH="coverage/cotms$t1_client_post.coverage" NAME="t1_client_post Coverage Results" MODIFIED="1533703675223" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ontKYC" />
     <SUITE FILE_PATH="coverage/cotms$standalone.coverage" NAME="standalone Coverage Results" MODIFIED="1531806648697" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pyAndriod/_refer/kb-master/0_Hello" />
-    <SUITE FILE_PATH="coverage/cotms$kycCliTest2.coverage" NAME="kycCliTest2 Coverage Results" MODIFIED="1534220018411" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ontKYC" />
+    <SUITE FILE_PATH="coverage/cotms$kycCliTest2.coverage" NAME="kycCliTest2 Coverage Results" MODIFIED="1534220436539" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ontKYC" />
     <SUITE FILE_PATH="coverage/cotms$sendMail.coverage" NAME="sendMail Coverage Results" MODIFIED="1533803769168" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pyMail/Mail" />
     <SUITE FILE_PATH="coverage/cotms$kycServer.coverage" NAME="kycServer Coverage Results" MODIFIED="1534219997014" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ontKYC" />
   </component>
@@ -42,12 +39,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="94" />
+          <entry key="py" value="95" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="94" />
+          <entry key="Python" value="95" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -88,8 +85,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ontKYC/kycCliTest2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="10" column="37" lean-forward="true" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
+            <state relative-caret-position="243">
+              <caret line="9" column="19" lean-forward="true" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -132,9 +129,9 @@
         <option value="$PROJECT_DIR$/ontKYC/tests/t1_cli_post2.py" />
         <option value="$PROJECT_DIR$/ontKYC/cotServer.py" />
         <option value="$PROJECT_DIR$/ontKYC/kycCliTest.py" />
-        <option value="$PROJECT_DIR$/ontKYC/kycCliTest2.py" />
         <option value="$PROJECT_DIR$/pyMail/Mail/sendMail.py" />
         <option value="$PROJECT_DIR$/ontKYC/kycServer.py" />
+        <option value="$PROJECT_DIR$/ontKYC/kycCliTest2.py" />
       </list>
     </option>
   </component>
@@ -144,7 +141,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="-7" />
     <option name="width" value="1934" />
     <option name="height" value="1006" />
@@ -387,7 +384,7 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1934" height="1006" extended-state="0" />
+    <frame x="-7" y="0" width="1934" height="1006" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.112059765" />
@@ -550,8 +547,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ontKYC/kycCliTest2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="10" column="37" lean-forward="true" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
+        <state relative-caret-position="243">
+          <caret line="9" column="19" lean-forward="true" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
