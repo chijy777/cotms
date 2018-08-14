@@ -1,8 +1,0 @@
-#发送邮件
-backend_mail_send:
-    path:     /send
-    defaults: { _controller: AppBundle:Backend\Mail:send}
-
-backend_mail_sendCommit:
-    path:     /sendCommit
-    defaults: { _controller: AppBundle:Backend\Mail:sendCommit}

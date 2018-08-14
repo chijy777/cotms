@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8684569d-ae8e-4c4b-870e-072e9b050f92" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/ontKYC/kycServer.py" beforeDir="false" afterPath="$PROJECT_DIR$/ontKYC/kycServer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ontKYC/test/t_claim.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ontKYC/tests/t1_cli_get.py" beforeDir="false" afterPath="$PROJECT_DIR$/ontKYC/test/t1_cli_get.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ontKYC/tests/t1_cli_post.py" beforeDir="false" afterPath="$PROJECT_DIR$/ontKYC/test/t1_cli_post.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ontKYC/tests/t1_cli_post2.py" beforeDir="false" afterPath="$PROJECT_DIR$/ontKYC/test/t1_cli_post2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ontKYC/tests/t1_server.py" beforeDir="false" afterPath="$PROJECT_DIR$/ontKYC/test/t1_server.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,6 +21,7 @@
     <SUITE FILE_PATH="coverage/cotms$t1_client_get.coverage" NAME="t1_client_get Coverage Results" MODIFIED="1533703524066" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ontKYC" />
     <SUITE FILE_PATH="coverage/cotms$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1531811439140" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pyAndriod/_refer/kb-master/6_2048" />
     <SUITE FILE_PATH="coverage/cotms$kycCliTest1.coverage" NAME="kycCliTest1 Coverage Results" MODIFIED="1534228839237" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ontKYC" />
+    <SUITE FILE_PATH="coverage/cotms$t_claim.coverage" NAME="t_claim Coverage Results" MODIFIED="1534230972001" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ontKYC/test" />
     <SUITE FILE_PATH="coverage/cotms$t1_client_post2.coverage" NAME="t1_client_post2 Coverage Results" MODIFIED="1533706664145" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ontKYC" />
     <SUITE FILE_PATH="coverage/cotms$t1_server.coverage" NAME="t1_server Coverage Results" MODIFIED="1533706655784" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ontKYC" />
     <SUITE FILE_PATH="coverage/cotms$Unittests_in_t717_1_py.coverage" NAME="Unittests in t717_1.py Coverage Results" MODIFIED="1531811361421" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pyAndriod" />
@@ -24,9 +30,9 @@
     <SUITE FILE_PATH="coverage/cotms$Unittests_in_test1_server_py.coverage" NAME="Unittests in test1_server.py Coverage Results" MODIFIED="1533703459109" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ontKYC" />
     <SUITE FILE_PATH="coverage/cotms$t1_client_post.coverage" NAME="t1_client_post Coverage Results" MODIFIED="1533703675223" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ontKYC" />
     <SUITE FILE_PATH="coverage/cotms$standalone.coverage" NAME="standalone Coverage Results" MODIFIED="1531806648697" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pyAndriod/_refer/kb-master/0_Hello" />
-    <SUITE FILE_PATH="coverage/cotms$kycCliTest2.coverage" NAME="kycCliTest2 Coverage Results" MODIFIED="1534220436539" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ontKYC" />
+    <SUITE FILE_PATH="coverage/cotms$kycCliTest2.coverage" NAME="kycCliTest2 Coverage Results" MODIFIED="1534228973630" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ontKYC" />
     <SUITE FILE_PATH="coverage/cotms$sendMail.coverage" NAME="sendMail Coverage Results" MODIFIED="1533803769168" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pyMail/Mail" />
-    <SUITE FILE_PATH="coverage/cotms$kycServer.coverage" NAME="kycServer Coverage Results" MODIFIED="1534219997014" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ontKYC" />
+    <SUITE FILE_PATH="coverage/cotms$kycServer.coverage" NAME="kycServer Coverage Results" MODIFIED="1534229643630" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ontKYC" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="1533120092">
@@ -39,29 +45,29 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="124" />
+          <entry key="py" value="568" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="124" />
+          <entry key="Python" value="568" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="2" />
+          <entry key="py" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="2" />
+          <entry key="Python" value="7" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ontKYC/kycServer.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="292">
@@ -85,10 +91,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ontKYC/kycCliTest2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="34" column="21" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="21" />
+            <state relative-caret-position="319">
+              <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ontKYC/test/t_claim.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-549">
+              <caret line="19" column="3" lean-forward="true" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -133,6 +151,7 @@
         <option value="$PROJECT_DIR$/ontKYC/kycCliTest2.py" />
         <option value="$PROJECT_DIR$/ontKYC/kycCliTest1.py" />
         <option value="$PROJECT_DIR$/ontKYC/kycServer.py" />
+        <option value="$PROJECT_DIR$/ontKYC/test/t_claim.py" />
       </list>
     </option>
   </component>
@@ -163,6 +182,12 @@
               <item name="cotms" type="b2602c69:ProjectViewProjectNode" />
               <item name="cotms" type="462c0819:PsiDirectoryNode" />
               <item name="ontKYC" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cotms" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cotms" type="462c0819:PsiDirectoryNode" />
+              <item name="ontKYC" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -205,29 +230,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.kycCliTest1">
-    <configuration name="kycCliTest" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="cotms" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ontKYC" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="D:\COT\git\cot\cotms\ontKYC\kycCliTest1.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.t_claim">
     <configuration name="kycCliTest1" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="cotms" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -316,6 +319,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="t_claim" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="cotms" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ontKYC/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ontKYC/test/t_claim.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-interpreter>project</node-interpreter>
       <node-options />
@@ -342,18 +367,18 @@
     </configuration>
     <list>
       <item itemvalue="Python.kycServer" />
-      <item itemvalue="Python.kycCliTest" />
       <item itemvalue="Python.kycCliTest2" />
       <item itemvalue="Python.kycCliTest1" />
       <item itemvalue="Python.sendMail" />
+      <item itemvalue="Python.t_claim" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.kycCliTest1" />
-        <item itemvalue="Python.kycCliTest2" />
+        <item itemvalue="Python.t_claim" />
         <item itemvalue="Python.kycServer" />
+        <item itemvalue="Python.kycCliTest2" />
+        <item itemvalue="Python.kycCliTest1" />
         <item itemvalue="Python.sendMail" />
-        <item itemvalue="Python.kycCliTest" />
       </list>
     </recent_temporary>
   </component>
@@ -388,12 +413,12 @@
     <frame x="-7" y="0" width="1934" height="1006" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.112059765" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16328709" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32960895" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.38761467" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3761468" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -473,20 +498,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ontKYC/tests/t1_cli_get.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="31" lean-forward="true" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ontKYC/tests/t1_cli_post.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="25" column="31" lean-forward="true" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="486">
@@ -495,20 +506,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ontKYC/supervisor.py" />
-    <entry file="file://$PROJECT_DIR$/ontKYC/tests/t1_cli_post2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ontKYC/tests/t1_server.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="24" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/dev/python/Python36/Lib/site-packages/tornado/options.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="524">
@@ -529,16 +526,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ontKYC/kycCliTest2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="34" column="21" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ontKYC/kycCliTest1.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -552,6 +539,54 @@
           <caret line="33" column="11" lean-forward="true" selection-start-line="31" selection-start-column="22" selection-end-line="33" selection-end-column="11" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ontKYC/test/t1_server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="451">
+          <caret line="24" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ontKYC/test/t1_cli_post2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ontKYC/test/t1_cli_post.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="451">
+          <caret line="25" column="31" lean-forward="true" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ontKYC/test/t1_cli_get.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" column="31" lean-forward="true" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ontKYC/kycCliTest2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ontKYC/test/t_claim.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-549">
+          <caret line="19" column="3" lean-forward="true" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>
