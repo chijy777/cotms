@@ -1,4 +1,3 @@
-import json
 import logging
 import tornado
 import tornado.web
@@ -6,8 +5,6 @@ import tornado.httpserver
 import tornado.ioloop
 import tornado.options
 from tornado.options import define, options
-from tornado.httpserver import HTTPServer
-
 
 logger = logging.getLogger("ontkyc")
 
@@ -20,24 +17,28 @@ class IndexHandler(tornado.web.RequestHandler):
 
 
 class NotifyHandler(tornado.web.RequestHandler):
-    """证书信息."""
+    """
+    回调函数，接收证书信息.
+    """
     def post(self):
-        logger.info("ip======================>'{}'".format( self.request.remote_ip))
-        logger.info("arguments=========>'{}'".format(self.request.arguments))
-        # logger.info("body_arguments============>'{}{}'".format(type(self.request.body_arguments), self.request.body_arguments))
+        logger.info(
+            "Notify/begin......, client_ip={}, arguments={}".format( self.request.remote_ip, self.request.arguments)
+        )
+        logger.info(
+            "Notify/body_arguments..., {}".format(self.request.body_arguments)
+        )
         for k, v in self.request.body_arguments.items():
-            logger.info("'{}'============>'{}{}'".format( k, type(v), v))
+            logger.info("Notify/body_item..., k={}, v={}/{}".format( k, type(v), v))
 
+        # 应答.
         respon = {
             'Action' :  'AuthConfirm',
             "Error": 0,
             "Desc": "SUCCESS",
             "Result": 'true',
-
         }
-
-        respon_json = tornado.escape.json_encode(respon)
-        self.write(respon_json)
+        responJson = tornado.escape.json_encode(respon)
+        self.write(responJson)
 
 
 application = tornado.web.Application([
