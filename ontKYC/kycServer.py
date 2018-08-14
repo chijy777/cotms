@@ -1,3 +1,4 @@
+import json
 import logging
 import tornado
 import tornado.web
@@ -25,8 +26,13 @@ class NotifyHandler(tornado.web.RequestHandler):
             "Notify/begin......, client_ip={}, arguments={}".format( self.request.remote_ip, self.request.arguments)
         )
         logger.info(
-            "Notify/body_arguments..., {}".format(self.request.body_arguments)
+            "Notify/body..., body_arguments={}, body={}".format(self.request.body_arguments, self.request.body)
         )
+        jsonData = json.loads(self.request.body)
+        logger.info(
+            "Notify/json_data..., jsonData={}".format(jsonData)
+        )
+
         for k, v in self.request.body_arguments.items():
             logger.info("Notify/body_item..., k={}, v={}/{}".format( k, type(v), v))
 

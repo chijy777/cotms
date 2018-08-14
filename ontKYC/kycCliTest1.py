@@ -1,7 +1,8 @@
 from urllib import request
 from urllib import request, parse
 
-url = "http://127.0.0.1:8801/ontkyc/notify"
+# url = "http://127.0.0.1:8801/ontkyc/notify"
+url = "http://api.cot.network/ontkyc/notify"
 
 print('Test client post...')
 
