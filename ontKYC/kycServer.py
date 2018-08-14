@@ -28,10 +28,10 @@ class NotifyHandler(tornado.web.RequestHandler):
         logger.info(
             "Notify/body..., body_arguments={}, body={}".format(self.request.body_arguments, self.request.body)
         )
-        jsonData = json.loads(self.request.body)
-        logger.info(
-            "Notify/json_data..., jsonData={}".format(jsonData)
-        )
+        # jsonData = json.loads(self.request.body)
+        # logger.info(
+        #     "Notify/json_data..., jsonData={}".format(jsonData)
+        # )
 
         for k, v in self.request.body_arguments.items():
             logger.info("Notify/body_item..., k={}, v={}/{}".format( k, type(v), v))
