@@ -5,7 +5,6 @@ import pymysql
 import requests
 from pyMail.Mail import settings
 
-
 class SendMail(object):
     def __init__(self):
         self.mysqlDB = None
@@ -32,7 +31,7 @@ class SendMail(object):
 
         # 测试号-测试.
         # self.mailList = ["1178937142@qq.com"]
-        self.mailList = ["2585747805@qq.com"]
+        # self.mailList = ["2585747805@qq.com"]
         # self.mailList = [
         #     '2585747805@qq.com',
         #     '2317758329@qq.com',
