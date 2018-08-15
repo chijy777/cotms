@@ -61,10 +61,8 @@ class NotifyHandler(tornado.web.RequestHandler):
         # 插入DB.
         OntKycLog.insert(
             ont_kyc_data=self.kycItem.get('ont_kyc_data'),
-            ont_OntPassOntId=self.kycItem.get('ont_OntPassOntId'),
-            ont_Claims=self.kycItem.get('ont_Claims'),
-            ont_Signature=self.kycItem.get('ont_Signature'),
-            ont_UserOntId=self.kycItem.get('ont_UserOntId'),
+            ont_payload=self.kycItem.get('ont_payload'),
+            ont_Claims_sub=self.kycItem.get('ont_Claims_sub'),
 
             ont_Claims_clm_IssuerName=self.kycItem.get('ont_Claims_clm_IssuerName'),
             ont_Claims_clm_Email=self.kycItem.get('ont_Claims_clm_Email'),
@@ -76,6 +74,11 @@ class NotifyHandler(tornado.web.RequestHandler):
             ont_Claims_context=self.kycItem.get('ont_Claims_context'),
             ont_Claims_iat=self.kycItem.get('ont_Claims_iat'),
             ont_Claims_exp = self.kycItem.get('ont_Claims_exp'),
+
+            ont_OntPassOntId=self.kycItem.get('ont_OntPassOntId'),
+            ont_Claims=self.kycItem.get('ont_Claims'),
+            ont_Signature=self.kycItem.get('ont_Signature'),
+            ont_UserOntId=self.kycItem.get('ont_UserOntId'),
          )
 
         # 成功，返回应答.

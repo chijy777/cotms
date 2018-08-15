@@ -10,6 +10,7 @@ class KycItem(object):
     ont_Signature = None
     ont_Claims = None
 
+    ont_payload = None
     ont_Claims_clm_IssuerName = None
     ont_Claims_clm_Email = None
     ont_Claims_clm_Country = None
@@ -17,6 +18,7 @@ class KycItem(object):
     ont_Claims_clm_DocumentType = None
     ont_Claims_clm_Name = None
 
+    ont_Claims_sub = None
     ont_Claims_context = None
     ont_Claims_iat = None
     ont_Claims_exp = None

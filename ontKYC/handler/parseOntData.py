@@ -63,12 +63,14 @@ class ParseOntData(object):
                 signature = base64.b64decode(claim_list[2])
             if len(claim_list) >= 4:
                 merkleproof = base64.b64decode(claim_list[3])
-            logger.info("ParseOntData.parse_claims/parse data..., head={}".format(head))
             logger.info("ParseOntData.parse_claims/parse data..., payload={}".format(payload))
+            logger.info("ParseOntData.parse_claims/parse data..., head={}".format(head))
             logger.info("ParseOntData.parse_claims/parse data..., signature={}".format(signature))
             logger.info("ParseOntData.parse_claims/parse data..., merkleproof={}".format(merkleproof))
 
             if payload:
+                self.retDict['ont_payload'] = payload
+
                 jsonData = json.loads(payload)
                 if jsonData['clm'] :
                     self.retDict['ont_Claims_clm_IssuerName'] = jsonData.get('clm').get('IssuerName')
@@ -78,9 +80,11 @@ class ParseOntData(object):
                     self.retDict['ont_Claims_clm_DocumentType'] = jsonData.get('clm').get('DocumentType')
                     self.retDict['ont_Claims_clm_Name'] = jsonData.get('clm').get('Name')
 
+                if jsonData['sub'] :
+                    self.retDict['ont_Claims_sub'] = jsonData.get('sub')
                 if jsonData[r'@context'] :
                     self.retDict['ont_Claims_context'] = jsonData.get('@context')
-                if jsonData[r'iat'] :
+                if jsonData['iat'] :
                     self.retDict['ont_Claims_iat'] = jsonData.get('iat')
                 if jsonData['exp'] :
                     self.retDict['ont_Claims_exp'] = jsonData.get('exp')
