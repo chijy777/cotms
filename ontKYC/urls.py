@@ -1,4 +1,4 @@
-from ontKYC.handler.kycServer import IndexHandler, NotifyHandler, TestNotifyHandler
+from handler.kycServer import IndexHandler, NotifyHandler, TestNotifyHandler
 
 __all__ = ['urls_pattern']
 
