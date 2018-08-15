@@ -1,0 +1,3 @@
+tornado
+SQLAlchemy==1.2.10
+PyMySQL
