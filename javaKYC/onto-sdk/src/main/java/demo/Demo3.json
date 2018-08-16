@@ -1,0 +1,11 @@
+{
+  "name": "MyWallet",
+  "version": "1.0",
+  "scrypt": {},
+  "defaultOntid": "did:ont:TJNxJe2Ty8eSCjCDxDPwiS78NRAn8XPTFL",
+  "defaultAccountAddress": "TJNxJe2Ty8eSCjCDxDPwiS78NRAn8XPTFL",
+  "createTime": "2018-03-14T03:12:30.862Z",
+  "identities": [],
+  "accounts": [],
+  "extra": null
+}
