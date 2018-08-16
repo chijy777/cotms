@@ -1,0 +1,38 @@
+{
+  "accounts":[
+
+  ],
+  "createTime":"2018-08-16T11:57:39Z",
+  "defaultAccountAddress":"",
+  "defaultOntid":"did:ont:AU33gcuRJMNgDyLSSRHzfAuBri4wcY2jzh",
+  "identities":[
+    {
+      "controls":[
+        {
+          "address":"AU33gcuRJMNgDyLSSRHzfAuBri4wcY2jzh",
+          "algorithm":"ECDSA",
+          "enc-alg":"aes-256-gcm",
+          "hash":"sha256",
+          "id":"keys-1",
+          "key":"Wcrjiq3BgiCf0Crij+Z6ez0SxNCGW/7BcACv5K095U5UJ5XYKnx7BvRoJdtnfP7W",
+          "parameters":{
+            "curve":"secp256r1"
+          },
+          "salt":"B/l6YW49ZFCYIx1RmVffIQ=="
+        }
+      ],
+      "isDefault":true,
+      "label":"8be4b417",
+      "lock":false,
+      "ontid":"did:ont:AU33gcuRJMNgDyLSSRHzfAuBri4wcY2jzh"
+    }
+  ],
+  "name":"com.github.ontio",
+  "scrypt":{
+    "dkLen":64,
+    "n":16384,
+    "p":8,
+    "r":8
+  },
+  "version":"1.0"
+}

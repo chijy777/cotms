@@ -75,8 +75,15 @@ class ParseOntData(object):
                 if jsonData['clm'] :
                     self.retDict['ont_Claims_clm_IssuerName'] = jsonData.get('clm').get('IssuerName')
                     self.retDict['ont_Claims_clm_Email'] = jsonData.get('clm').get('Email')
+
                     self.retDict['ont_Claims_clm_Country'] = jsonData.get('clm').get('Country')
+                    if self.retDict['ont_Claims_clm_Country'] is None:
+                        self.retDict['ont_Claims_clm_Country'] = jsonData.get('clm').get('Nationality')
+
                     self.retDict['ont_Claims_clm_PhoneNumber'] = jsonData.get('clm').get('PhoneNumber')
+                    if self.retDict['ont_Claims_clm_PhoneNumber'] is None:
+                        self.retDict['ont_Claims_clm_PhoneNumber'] = jsonData.get('clm').get('Phone')
+
                     self.retDict['ont_Claims_clm_DocumentType'] = jsonData.get('clm').get('DocumentType')
                     self.retDict['ont_Claims_clm_Name'] = jsonData.get('clm').get('Name')
 
