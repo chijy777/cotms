@@ -30,16 +30,18 @@ class SendMail(object):
         self.mysql_query_waited_mail_list()
 
         # 测试号-测试.
-        # self.mailList = ["1178937142@qq.com"]
-        # self.mailList = ["2585747805@qq.com"]
-        # self.mailList = [
-        #     '2585747805@qq.com',
-        #     '2317758329@qq.com',
-        #     'jayeer@citiz.net',
-        #     '17156309@qq.com',
-        #     '1981211830@qq.com',
-        #     '17156311@qq.com'
-        # ]
+        self.mailList = [
+            # "1178937142@qq.com", # 迟金岩.
+            # "chijinyan@aihuinong.com",   # 迟金岩.
+
+            "2585747805@qq.com",  # 仲平.
+
+            #     '2317758329@qq.com',
+            #     'jayeer@citiz.net',
+            #     '17156309@qq.com',
+            #     '1981211830@qq.com',
+            #     '17156311@qq.com'
+        ]
 
         # 启动邮件发送，逐条发送.
         for mail in self.mailList:
