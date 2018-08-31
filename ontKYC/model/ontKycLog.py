@@ -3,7 +3,7 @@ from lib.database import Base, db_session
 from sqlalchemy import Column, Integer, String
 
 class OntKycLog(Base):
-    __tablename__ = 'ont_kyc_log'
+    __tablename__ = 'ont_kyc_log_new'
 
     id = Column(Integer, primary_key=True)
 
@@ -98,6 +98,7 @@ class OntKycLog(Base):
             ont_Signature=ont_Signature, ont_Claims=ont_Claims,
         )
         db_session.add(newOKL)
+
         try:
             db_session.commit()
         except:

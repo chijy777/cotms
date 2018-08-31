@@ -45,53 +45,63 @@ class ParseOntData(object):
             for i, v in enumerate(claims):
                 logger.info("ParseOntData.parse_claims/claim items..., i={}, v={}".format(i, v))
 
-            claim_list = claims[0].split(".")
-            # logger.info("ParseOntData.parse_claims/claim_list..., length={}".format(len(claim_list)))
-            # for i, v in enumerate(claim_list):
-            #     logger.info("ParseOntData.parse_claims/claim_list_item...{}, data={}".format(i, v))
-            #     logger.info("ParseOntData.parse_claims/claim_list_item...{}, base64_encode={}".format(i, base64.b64decode(v)))
+                claim_list = claims[i].split(".")
 
-            head = None
-            payload = None
-            signature = None
-            merkleproof = None
-            if len(claim_list) >= 1:
-                head = base64.b64decode(claim_list[0])
-            if len(claim_list) >= 2:
-                payload = base64.b64decode(claim_list[1])
-            if len(claim_list) >= 3:
-                signature = base64.b64decode(claim_list[2])
-            if len(claim_list) >= 4:
-                merkleproof = base64.b64decode(claim_list[3])
-            logger.info("ParseOntData.parse_claims/parse data..., payload={}".format(payload))
-            logger.info("ParseOntData.parse_claims/parse data..., head={}".format(head))
-            logger.info("ParseOntData.parse_claims/parse data..., signature={}".format(signature))
-            logger.info("ParseOntData.parse_claims/parse data..., merkleproof={}".format(merkleproof))
+                # claim_list = claims[0].split(".")
+                # logger.info("ParseOntData.parse_claims/claim_list..., length={}".format(len(claim_list)))
+                # for i, v in enumerate(claim_list):
+                #     logger.info("ParseOntData.parse_claims/claim_list_item...{}, data={}".format(i, v))
+                #     logger.info("ParseOntData.parse_claims/claim_list_item...{}, base64_encode={}".format(i, base64.b64decode(v)))
 
-            if payload:
-                self.retDict['ont_payload'] = payload
+                head = None
+                payload = None
+                signature = None
+                merkleproof = None
+                if len(claim_list) >= 1:
+                    head = base64.b64decode(claim_list[0])
+                if len(claim_list) >= 2:
+                    payload = base64.b64decode(claim_list[1])
+                if len(claim_list) >= 3:
+                    signature = base64.b64decode(claim_list[2])
+                if len(claim_list) >= 4:
+                    merkleproof = base64.b64decode(claim_list[3])
+                logger.info("ParseOntData.parse_claims/parse data..., payload={}".format(payload))
+                logger.info("ParseOntData.parse_claims/parse data..., head={}".format(head))
+                logger.info("ParseOntData.parse_claims/parse data..., signature={}".format(signature))
+                logger.info("ParseOntData.parse_claims/parse data..., merkleproof={}".format(merkleproof))
 
-                jsonData = json.loads(payload)
-                if jsonData['clm'] :
-                    self.retDict['ont_Claims_clm_IssuerName'] = jsonData.get('clm').get('IssuerName')
-                    self.retDict['ont_Claims_clm_Email'] = jsonData.get('clm').get('Email')
+                if payload:
+                    self.retDict['ont_payload'] = payload
 
-                    self.retDict['ont_Claims_clm_Country'] = jsonData.get('clm').get('Country')
-                    if self.retDict['ont_Claims_clm_Country'] is None:
-                        self.retDict['ont_Claims_clm_Country'] = jsonData.get('clm').get('Nationality')
+                    jsonData = json.loads(payload)
+                    if jsonData['clm'] :
+                        if not self.retDict.get('ont_Claims_clm_IssuerName',None):
+                            self.retDict['ont_Claims_clm_IssuerName'] = jsonData.get('clm').get('IssuerName')
 
-                    self.retDict['ont_Claims_clm_PhoneNumber'] = jsonData.get('clm').get('PhoneNumber')
-                    if self.retDict['ont_Claims_clm_PhoneNumber'] is None:
-                        self.retDict['ont_Claims_clm_PhoneNumber'] = jsonData.get('clm').get('Phone')
+                        if not self.retDict.get('ont_Claims_clm_Email',None):
+                            self.retDict['ont_Claims_clm_Email'] = jsonData.get('clm').get('Email')
 
-                    self.retDict['ont_Claims_clm_DocumentType'] = jsonData.get('clm').get('DocumentType')
-                    self.retDict['ont_Claims_clm_Name'] = jsonData.get('clm').get('Name')
+                        if not self.retDict.get('ont_Claims_clm_Country',None):
+                            self.retDict['ont_Claims_clm_Country'] = jsonData.get('clm').get('Country')
+                            if not self.retDict['ont_Claims_clm_Country']:
+                                self.retDict['ont_Claims_clm_Country'] = jsonData.get('clm').get('Nationality')
 
-                if jsonData['sub'] :
-                    self.retDict['ont_Claims_sub'] = jsonData.get('sub')
-                if jsonData[r'@context'] :
-                    self.retDict['ont_Claims_context'] = jsonData.get('@context')
-                if jsonData['iat'] :
-                    self.retDict['ont_Claims_iat'] = jsonData.get('iat')
-                if jsonData['exp'] :
-                    self.retDict['ont_Claims_exp'] = jsonData.get('exp')
+                        if not self.retDict.get('ont_Claims_clm_PhoneNumber',None):
+                            self.retDict['ont_Claims_clm_PhoneNumber'] = jsonData.get('clm').get('PhoneNumber')
+                            if not self.retDict.get('ont_Claims_clm_PhoneNumber',None):
+                                self.retDict['ont_Claims_clm_PhoneNumber'] = jsonData.get('clm').get('Phone')
+
+                        if not self.retDict.get('ont_Claims_clm_DocumentType',None):
+                            self.retDict['ont_Claims_clm_DocumentType'] = jsonData.get('clm').get('DocumentType')
+
+                        if not self.retDict.get('ont_Claims_clm_Name',None):
+                            self.retDict['ont_Claims_clm_Name'] = jsonData.get('clm').get('Name')
+
+                    if jsonData['sub'] :
+                        self.retDict['ont_Claims_sub'] = jsonData.get('sub')
+                    if jsonData[r'@context'] :
+                        self.retDict['ont_Claims_context'] = jsonData.get('@context')
+                    if jsonData['iat'] :
+                        self.retDict['ont_Claims_iat'] = jsonData.get('iat')
+                    if jsonData['exp'] :
+                        self.retDict['ont_Claims_exp'] = jsonData.get('exp')
