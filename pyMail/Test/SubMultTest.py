@@ -1,8 +1,7 @@
 #!/usr/bin/python
 #coding:utf-8
 import threading
-import time
-from TestSub.SubTest import SubTest
+from Test.SubTest import SubTest
 
 
 proclist=[]

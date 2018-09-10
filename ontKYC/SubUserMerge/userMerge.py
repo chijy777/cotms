@@ -3,10 +3,9 @@
 import json
 import os
 import pymysql
-from sub_init import config_init
+from SubUserInfoInit import config_user
 
-
-class InitSubWx(object):
+class InitWx(object):
     """
     初始化，订阅者.微信信息.
     """
@@ -146,5 +145,5 @@ class InitSubWx(object):
 
 
 if __name__ == '__main__':
-    wx = InitSubWx()
+    wx = InitWx()
     wx.process()

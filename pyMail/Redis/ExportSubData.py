@@ -1,11 +1,6 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
-import json
-import pymysql
 import redis
-import sys
-reload(sys)
-sys.setdefaultencoding('utf-8')
 
 class ExportSubData(object):
     def __init__(self):
@@ -40,10 +35,7 @@ class ExportSubData(object):
         连接REDIS
         """
         self.redisDB = redis.Redis(
-            host='127.0.0.1',
-            port=6666,
-            db=1,
-            password='cot2018'
+            host='127.0.0.1', port=6666, db=1, password='cot2018'
         )
 
 if __name__ == '__main__':

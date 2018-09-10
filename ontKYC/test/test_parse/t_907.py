@@ -1,0 +1,15 @@
+import json
+
+a= """
+{"IssuerName":"CFCA",
+"\xe5\xa7\x93\xe5\x90\x8d":"\xe7\x9f\xb3\xe7\xbf\xa0\xe5\x8d\x8e",
+"\xe8\xba\xab\xe4\xbb\xbd\xe8\xaf\x81\xe5\x8f\xb7":"211282198607222622"}
+"""
+
+ss = a.encode('raw_unicode_escape')
+print(ss)  # 结果：b'\xe9\x9d\x92\xe8\x9b\x99\xe7\x8e\x8b\xe5\xad\x90'
+sss = ss.decode()
+print(sss)
+
+# print(json.dumps(a, ensure_ascii='utf-8'))
+

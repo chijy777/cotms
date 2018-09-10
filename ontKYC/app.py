@@ -2,7 +2,6 @@ import tornado
 import tornado.web
 import tornado.ioloop
 import tornado.options
-# from lib.database import db_session
 from tornado.options import define, options
 from tornado.httpserver import HTTPServer
 from settings import url_handlers, settings

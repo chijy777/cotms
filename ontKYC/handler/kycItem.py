@@ -1,7 +1,4 @@
-import json
-import logging
-import tornado
-import tornado.web
+# -*- coding: utf-8 -*-
 
 class KycItem(object):
     ont_kyc_data = None
@@ -25,3 +22,5 @@ class KycItem(object):
 
     update_time = None
 
+    id_name = None
+    id_no = None

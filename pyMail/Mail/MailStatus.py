@@ -1,11 +1,11 @@
-#!/usr/bin/python
-#coding:utf-8
+# -*- coding: utf-8 -*-
 import requests
 from Mail import settings
 
 
 class MailStatus(object):
-
+    """
+    """
     def query(self):
         """
         查询.
@@ -14,15 +14,14 @@ class MailStatus(object):
 
         params = {
             "apiUser": settings.SEND_CLOUD_API_USER,
-            "apiKey" : settings.SEND_CLOUD_API_KEY,
-            "days"   : 2
+            "apiKey": settings.SEND_CLOUD_API_KEY,
+            "days": 2
         }
         # print(content)
 
         # 发送.
         result = requests.post(url, files={}, data=params)
         print(result.text)
-
 
 
 if __name__ == '__main__':

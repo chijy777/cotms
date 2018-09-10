@@ -1,10 +1,9 @@
 #!/usr/bin/python
 #coding:utf-8
 import datetime,time
-from lxml import etree
 from PIL import Image
 from selenium import webdriver
-from TestSub.ruokuai import RClient
+from Test.ruokuai import RClient
 
 
 class SubTest(object):

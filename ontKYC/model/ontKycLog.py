@@ -3,7 +3,10 @@ from lib.database import Base, db_session
 from sqlalchemy import Column, Integer, String
 
 class OntKycLog(Base):
-    __tablename__ = 'ont_kyc_log_new'
+    """
+    """
+    # __tablename__ = 'ont_kyc_log_new'
+    __tablename__ = 'ont_kyc_log_dup'
 
     id = Column(Integer, primary_key=True)
 
@@ -77,9 +80,25 @@ class OntKycLog(Base):
             self.create_time = int(time.time())
         self.update_time = int(time.time())
 
+
+    @classmethod
+    def find_all(cls):
+        return db_session.query(
+            cls
+        ).filter().all()
+
+    @classmethod
+    def find_all_id(cls):
+        return db_session.query(
+            cls.id
+        ).filter(cls.id > 10798).all()
+
     @classmethod
     def find_one(cls, id):
-        return db_session.query(OntKycLog).filter(OntKycLog.id == id).first()
+        return db_session.query(
+            cls
+        ).filter(cls.id == id).first()
+
 
     @classmethod
     def insert(cls, ont_kyc_data=None, ont_payload=None, ont_Claims_sub=None,

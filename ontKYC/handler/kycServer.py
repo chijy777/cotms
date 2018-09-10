@@ -1,4 +1,5 @@
-import json
+# -*- coding: utf-8 -*-
+
 import logging
 import tornado
 import tornado.web
@@ -7,7 +8,6 @@ import tornado.ioloop
 import tornado.options
 from handler.parseOntData import ParseOntData
 from model.ontKycLog import OntKycLog
-from tornado.options import define, options
 
 logger = logging.getLogger("kyc_server")
 
